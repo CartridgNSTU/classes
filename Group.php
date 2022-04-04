@@ -4,6 +4,7 @@ class Group {
 	private $title;
 	private $course;
 	private $students = array();
+	private $descepline = array();
 
 	public function __construct($i, $t, $c) {
 		$this->id = $i;
@@ -20,7 +21,13 @@ class Group {
 		echo '<h1> Группа '.$this->title.'</h1>';
 		foreach ($this->students as $s) {
 			$s->display();
+			
 		}
+	}
+
+	public function addDescepline($descepline)
+	{
+		array_push($this->descepline, $descepline);
 	}
 
 	public function getTitle() {
