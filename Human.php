@@ -3,17 +3,15 @@ class Human {
 	private $name;
 	private $surname;
 	private $batya;
-	private $group;
 
-	public function __construct($n, $s, $p, $g) {
+	public function __construct($n, $s, $p) {
 		$this->name = $n;
 		$this->surname = $s;
 		$this->batya = $p;
-		$this->group = $g;
 	}
 
-	public function show() {
-		echo sprintf('Привет, я %s %s %s <br>', $this->surname,$this->name,$this->batya);
+	public function display() {
+		echo sprintf('Привет, я %s %s %s ', $this->surname,$this->name,$this->batya);
 	}
 
 	public function group() {
